@@ -1,11 +1,652 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahendran_Resume_2026</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Mahendran_Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer="defer" src="/static/js/main.85d13f53.js"></script>
+    <script defer src="main.js"></script>
+
+    <link href="/static/css/main.408124c8.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI";
+        line-height: 25px;
+        /* font-size: 14px; */
+        font-size: 13px;
+      }
+      .container-resume {
+        width: 1024px;
+        padding: 0;
+        margin: 0 auto;
+      }
+      .profile {
+        width: 150px;
+        height: 150px;
+        background-color: #dde2eb;
+        background-image: url(../../Images/Profile/resume-image.jpeg);
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: 0px -45px;
+        background-size: cover;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 0 0 5px 0;
+        width: 100%;
+      }
+      .header-right {
+        padding: 10px 0 0;
+      }
+      .name {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .address1 {
+        font-size: 20px;
+        color: #008cff;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      .contactdetails div {
+        display: flex;
+        align-items: center;
+      }
+      .joiner {
+        color: #424242;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .address2 {
+        margin-top: 5px;
+        font-weight: bold;
+      }
+      .address3 {
+        margin-top: 3px;
+      }
+      .experience-details {
+        display: flex;
+        align-items: center;
+      }
+      .title {
+        margin: 15px 0px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #69599c;
+        font-size: 25px;
+      }
+      .project-title {
+        margin: 10px 0px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #69599c;
+        font-size: 15px;
+      }
+      .Role {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .companyName {
+        font-size: 13px;
+        color: #424242;
+        font-weight: 700;
+      }
+      .contactdetails p {
+        display: flex;
+        align-items: center;
+      }
+
+      .contant {
+        text-align: justify;
+        line-height: 30px;
+      }
+      .education_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 0 10px 0;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .institute {
+        font-size: 13px;
+        margin: 0px 0px 0px;
+      }
+      .skills_box {
+        display: flex;
+        margin: 10px 0px 0px;
+        align-items: center;
+      }
+      .skills_box p {
+        margin: 0;
+      }
+      .skills_box p:nth-child(1) {
+        width: 4%;
+      }
+      .skills_box p:nth-child(2) {
+        width: 35%;
+        font-weight: bold;
+      }
+      .skills_box p:nth-child(3) {
+        width: 4%;
+      }
+      .skills_box p:nth-child(4) {
+        width: 55%;
+        /* white-space: nowrap; */
+      }
+      .d-flex {
+        display: flex;
+        align-items: flex-start;
+      }
+      .d-flex p:first-child {
+        width: 5%;
+        line-height: 30px;
+      }
+      .d-flex p:nth-child(2) {
+        width: 95%;
+        line-height: 30px;
+      }
+      .PROJECT_DESCRIPTION p {
+        text-align: justify;
+      }
+      .sign {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+        margin-top: 15px;
+      }
+      .contactdetails {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f1f1f1;
+        font-size: 17px;
+        padding: 5px;
+        margin: 10px 0;
+      }
+      .contactdetails i {
+        color: #69599c;
+        font-size: 20px;
+        margin-right: 5px;
+      }
+      .hide {
+        display: none;
+      }
+      .container-resume .row {
+        display: flex;
+        justify-content: space-between;
+      }
+      .left,
+      .right {
+        /* width: 47%; */
+        width: 50%;
+      }
+
+      .Declaration {
+        margin: 15px 0 0;
+      }
+
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+        .container-resume {
+          background: #fff;
+          width: 100%;
+          padding: 200px 16px;
+          min-height: 100vh;
+          zoom: 0.4;
+        }
+      }
+    </style>
+    <style data-emotion="css" data-s=""></style>
+  </head>
+  <body style="background: white">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="my-resume">
+        <div class="container-resume" id="resume-content">
+          <div class="header">
+            <div class="header-right">
+              <h1 class="name">Mahendran M</h1>
+              <h3 class="address1">
+                Front-End Developer -
+                <span class="joiner">Immediate Joiner</span>
+              </h3>
+              <div class="address2">
+                I have nearly 4 years of experience building responsive,
+                scalable, and high-performance web applications using React.js,
+                Next.js, TypeScript, JavaScript, Redux Toolkit, Tailwind CSS,
+                HTML5, and CSS3. Additionally, I have hands-on experience in
+                full-stack development using Node.js, Express.js, and MongoDB
+                (MERN Stack), along with basic knowledge of PostgreSQL,
+                including REST API integration, database management, and
+                deployment.
+              </div>
+            </div>
+          </div>
+          <div class="contactdetails">
+            <div>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i
+              ><span>mahendran361999@gmail.com</span>
+            </div>
+            <div>
+              <i class="fa fa-mobile-phone" aria-hidden="true"></i
+              ><span>(+91) 86081 20316</span>
+            </div>
+            <div>
+              <i class="fa fa-github" aria-hidden="true"></i
+              ><span>https://github.com/techmahendran</span>
+            </div>
+            <div>
+              <i class="fa fa-linkedin" aria-hidden="true"></i
+              ><span>https://www.linkedin.com/in/techmahendran</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="left">
+              <div class="experiance">
+                <p class="title">WORK EXPERIENCE</p>
+                <div class="mb-3">
+                  <div class="experience-details">
+                    <div>
+                      <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="col ms-3">
+                      <div class="Role mb-1">Front-End Developer</div>
+                      <div class="companyName">
+                        Genrichers Innovations Private limited - Chennai.
+                      </div>
+                      <div class="institute">23 June 2025 - Present</div>
+                      <div class="institute">
+                        <div class="companyName me-2 fw-bold">
+                          Technologies:
+                        </div>
+                        React.js, Redux Toolkit (RTK), Next.js, TypeScript,
+                        Material UI (MUI), Tailwind CSS.
+                      </div>
+                      <div class="d-flex">
+                        <div class="companyName me-2 fw-bold">Project :</div>
+                        <div class="institute">Impacteers</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="experience-details">
+                    <div>
+                      <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="col ms-3">
+                      <div class="Role mb-1">Front-End Developer</div>
+                      <div class="companyName">
+                        Leadtech Solutions Pvt Ltd - Chennai.
+                      </div>
+                      <div class="institute">Aug 2022 - Apr 2025</div>
+                      <div class="institute">
+                        Technology : HTML5, CSS3, JavaScript, React Js.
+                      </div>
+                      <div class="d-flex">
+                        <div class="companyName me-2 fw-bold">Project :</div>
+                        <div class="institute">
+                          iFACT – Integrated Freight forwarding, Agency and
+                          Cargo Logistics
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="experiance">
+                <p class="title">PROJECT EXPERIENCE</p>
+                <div>
+                  <div class="fw-bold mt-3">Impacteers</div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Led frontend development using Next.js, TypeScript, MUI,
+                      and Tailwind CSS to build responsive and scalable web
+                      applications across multiple devices.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Built modern and responsive UI components using Next.js,
+                      TypeScript, MUI, and Tailwind CSS with focus on
+                      performance and usability.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Developed responsive frontend interfaces with Next.js,
+                      TypeScript, MUI, and Tailwind CSS, ensuring seamless user
+                      experience across desktop, tablet, and mobile devices.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Integrated skill-based job recommendation features to
+                      enhance user engagement and improve job discovery
+                      experience.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Implemented RESTful API integrations for job listings and
+                      company profiles to enable dynamic content rendering and
+                      efficient data handling.
+                    </div>
+                  </div>
+                  <div class="fw-bold mt-3">
+                    iFACT – Integrated Freight forwarding, Agency and Cargo
+                    Logistics
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Led frontend development for integrated freight forwarding
+                      solutions, contributing to a 30% improvement in user
+                      workflow efficiency through intuitive UI and optimized
+                      component structures.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Developed high-performance web applications using
+                      React.js, achieving faster load times (up to 40%) and
+                      seamless navigation.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Collaborated closely with UI/UX teams to build modern,
+                      accessible interfaces, ensuring WCAG compliance and
+                      improving user engagement metrics.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Integrated RESTful APIs and ensured mobile responsiveness,
+                      which helped reduce support tickets related to UI issues
+                      by 25%.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Enhanced user experience by contributing extensively to
+                      React.js components, improving component reusability and
+                      performance.
+                    </div>
+                  </div>
+                  <div class="experience-details mt-1">
+                    <p class="mb-0">
+                      <i
+                        class="fa fa-circle hidden"
+                        aria-hidden="true"
+                        style="font-size: 6px"
+                      ></i>
+                    </p>
+                    <div class="mb-0 col ms-3">
+                      Managed frontend tasks in logistics and cargo management
+                      projects, driving better coordination and reducing
+                      development turnaround time by 20%.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="technicalskills">
+                <p class="title">TECHNICAL SKILLS</p>
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Frameworks & Libraries</p>
+                  <p>:</p>
+                  <p>React.js, Next.js, Vue.js</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Programming Languages</p>
+                  <p>:</p>
+                  <p>JavaScript (ES6+), TypeScript</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Frontend Technologies</p>
+                  <p>:</p>
+                  <p>HTML5, CSS3, Tailwind CSS, Responsive Design</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>State Management</p>
+                  <p>:</p>
+                  <p>Redux Toolkit, Context API</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right"></i></p>
+                  <p>Backend Technologies</p>
+                  <p>:</p>
+                  <p>Node.js, Express.js</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right"></i></p>
+                  <p>Database</p>
+                  <p>:</p>
+                  <p>MongoDB, Mongoose, PostgreSQL (Basic)</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>UI Libraries</p>
+                  <p>:</p>
+                  <p>ShadCN UI, Material-UI (MUI)</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>API Integration</p>
+                  <p>:</p>
+                  <p>RESTful APIs, Axios, Fetch API</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Version Control</p>
+                  <p>:</p>
+                  <p>Git, GitHub, Bitbucket</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Tools & Platforms</p>
+                  <p>:</p>
+                  <p>Postman, Jira, VS Code, Chrome DevTools</p>
+                </div>
+
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Deployment</p>
+                  <p>:</p>
+                  <p>Vercel, Render</p>
+                </div>
+              </div>
+              <div class="education">
+                <p class="title">education</p>
+                <div class="education_box">
+                  <div class="education-left">
+                    <div class="bold" id="pg">
+                      Bachelor of Science (B.Sc.) in Computer Science
+                    </div>
+                    <p class="institute">Manonmaniam Sundaranar University</p>
+                  </div>
+                  <div class="education-right bold">2016 - 2019</div>
+                </div>
+              </div>
+              <div class="strength">
+                <p class="title">Strength</p>
+                <div class="mt-2">
+                  <i
+                    class="fa fa-caret-right"
+                    aria-hidden="true"
+                    style="width: 4%"
+                  ></i
+                  >Self-motivated and quick learner.
+                </div>
+                <div class="mt-2">
+                  <i
+                    class="fa fa-caret-right"
+                    aria-hidden="true"
+                    style="width: 4%"
+                  ></i
+                  >Hardworking and dedicated professional.
+                </div>
+                <div class="mt-2">
+                  <i
+                    class="fa fa-caret-right"
+                    aria-hidden="true"
+                    style="width: 4%"
+                  ></i
+                  >Good communication and teamwork abilities.
+                </div>
+                <div class="mt-2">
+                  <i
+                    class="fa fa-caret-right"
+                    aria-hidden="true"
+                    style="width: 4%"
+                  ></i
+                  >Self-taught developer and good player.
+                </div>
+                <div class="mt-2">
+                  <i
+                    class="fa fa-caret-right"
+                    aria-hidden="true"
+                    style="width: 4%"
+                  ></i
+                  >Passionate Front-End Developer with continuous learning
+                  mindset.
+                </div>
+              </div>
+              <div class="personal-details">
+                <p class="title">Personal Details</p>
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Portfolio</p>
+                  <p>:</p>
+                  <p>https://mahendran-m.vercel.app/</p>
+                </div>
+                <div class="skills_box">
+                  <p><i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                  <p>Languages Known</p>
+                  <p>:</p>
+                  <p>Tamil, English</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Declaration">
+            <p class="title">Declaration</p>
+            <p class="content">
+              I hereby declare that the above mentioned information is true to
+              best of my knowledge and I bear the responsibility for the
+              comments of the above mentioned particulars.
+            </p>
+          </div>
+          <div class="sign">
+            <div><p>Date:</p></div>
+            <div><p>( MAHENDRAN M )</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
